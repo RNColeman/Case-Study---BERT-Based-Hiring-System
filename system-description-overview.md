@@ -3,6 +3,13 @@ System Overview
 Purpose
 Automate resume screening to reduce manual workload and improve consistency. 
 
+Architecture Summary 
+Transformer encoder architecture
+12 layers (BERT-based)
+768 hidden size
+12 attention leads 
+~ 110M parameters 
+
 Inputs
 *Candidate Resumes 
 *Job Descriptions
@@ -14,7 +21,10 @@ Output
 *Shortlist recommendations
 
 Model Type
-BERT (Bidirectional Encoder Representations from Transformers) fine-tuned for text classification.
+Tokenization
+BERT encoder (Bidirectional Encoder Representations from Transformers) fine-tuned for text classification.
+Classification head
+
 
 Explanation of model - the model takes the text, understands its meaning using deep contextual embeddings, and outputs as labels (e.g. "qualified" or "not qualified"). It does this by reading text bidirectionally, building a deep semantic representation, and then mapping that representation to classification decision. 
 
